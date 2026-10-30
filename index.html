@@ -1,108 +1,95 @@
 <!doctype html>
 <html lang="es">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Mi ofrenda digital</title>
-    <meta name="description" content="Una ofrenda digital de Día de Muertos publicada con AWS Amplify Hosting." />
-    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M16 2c4 6 8 10 8 17a8 8 0 0 1-16 0c0-7 4-11 8-17z' fill='%23FF9F1C'/%3E%3C/svg%3E" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Chango&family=Work+Sans:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <!-- Papel picado: decoración, no necesitas cambiarlo -->
-    <svg width="0" height="0" class="sr-only" aria-hidden="true">
-      <symbol id="bandera" viewBox="0 0 100 120">
-        <path fill-rule="evenodd" d="M0 0H100V108L92 120 83 108 75 120 67 108 58 120 50 108 42 120 33 108 25 120 17 108 8 120 0 108Z
-          M12 14a3 3 0 1 0 6 0a3 3 0 1 0-6 0z M29 14a3 3 0 1 0 6 0a3 3 0 1 0-6 0z M47 14a3 3 0 1 0 6 0a3 3 0 1 0-6 0z
-          M65 14a3 3 0 1 0 6 0a3 3 0 1 0-6 0z M82 14a3 3 0 1 0 6 0a3 3 0 1 0-6 0z
-          M42 52a8 8 0 1 0 16 0a8 8 0 1 0-16 0z
-          M61 52a7 7 0 1 0 14 0a7 7 0 1 0-14 0z M25 52a7 7 0 1 0 14 0a7 7 0 1 0-14 0z
-          M52 67.6a7 7 0 1 0 14 0a7 7 0 1 0-14 0z M34 67.6a7 7 0 1 0 14 0a7 7 0 1 0-14 0z
-          M52 36.4a7 7 0 1 0 14 0a7 7 0 1 0-14 0z M34 36.4a7 7 0 1 0 14 0a7 7 0 1 0-14 0z
-          M18 82L25 90 18 98 11 90Z M82 82L89 90 82 98 75 90Z M50 86L54 92 50 98 46 92Z" />
-      </symbol>
-    </svg>
-    <div class="papel-picado" aria-hidden="true">
-      <svg class="bandera"><use href="#bandera" /></svg>
-      <svg class="bandera"><use href="#bandera" /></svg>
-      <svg class="bandera"><use href="#bandera" /></svg>
-      <svg class="bandera"><use href="#bandera" /></svg>
-      <svg class="bandera"><use href="#bandera" /></svg>
-      <svg class="bandera"><use href="#bandera" /></svg>
-      <svg class="bandera"><use href="#bandera" /></svg>
-      <svg class="bandera"><use href="#bandera" /></svg>
-      <svg class="bandera"><use href="#bandera" /></svg>
-      <svg class="bandera"><use href="#bandera" /></svg>
-    </div>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#10101c">
+  <meta name="description" content="Una ofrenda digital de Día de Muertos para honrar a quienes permanecen en nuestros corazones.">
+  <title>La memoria del corazón | Ofrenda digital</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="cielo" aria-hidden="true"></div>
+  <div class="papel-picado" aria-hidden="true">
+    <span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+  </div>
 
-    <main id="ofrenda" class="ofrenda">
-      <!--
-        TODO 1: ¿Para quién es tu ofrenda? Escribe su nombre, un apodo o el tema de tu ofrenda.
-        Ejemplo: <h1 class="titulo">Para mi abuela Lupita</h1>
-      -->
-      <h1 class="titulo">Escribe el título de tu ofrenda</h1>
+  <main id="ofrenda" class="ofrenda">
+    <header class="encabezado">
+      <div class="etiqueta"><span class="estrella">✦</span> OFRENDA DIGITAL · DÍA DE MUERTOS <span class="estrella">✦</span></div>
+      <h1>La memoria <em>del corazón</em></h1>
+      <p class="subtitulo">Hay amores que nunca se despiden.</p>
+      <div class="linea-ornamental" aria-hidden="true"><span>✺</span></div>
+    </header>
 
-      <div class="altar">
-        <div class="dedicatoria" id="dedicatoria">
-          <p class="pista">Enciende la vela para leer la dedicatoria.</p>
-          <!--
-            TODO 2: Escribe unas palabras para quien recuerdas: una persona, una mascota
-            o un personaje. Tu página va a ser pública,
-            así que comparte solo lo que quieras que cualquiera pueda leer.
-            Ejemplo: Por sus tamales de los domingos y por enseñarme a bailar cumbia en la cocina.
-          -->
-          <p class="texto-dedicatoria">
-            Escribe aquí tu dedicatoria: a quién recuerdas y por qué.
-          </p>
-        </div>
-
-        <div class="centro">
-          <!--
-            TODO 3: Pon una foto de quien recuerdas.
-            Arrastra tu foto (JPG o PNG) a la lista de archivos del editor.
-            Luego cambia "foto-ejemplo.svg" por el nombre de tu foto y describe en alt qué se ve.
-            Tu página va a ser pública, así que usa una foto que quieras compartir.
-            Ejemplo: <img class="retrato" src="abuela-lupita.jpg" alt="Mi abuela Lupita en su cocina" />
-          -->
-          <img class="retrato" src="foto-ejemplo.svg" alt="Espacio para la foto de la ofrenda" />
-          <div class="vela" aria-hidden="true">
-            <span class="llama"></span>
-            <span class="cera"></span>
-          </div>
-        </div>
-
-        <div class="nivel nivel-1" aria-hidden="true">
-          <span class="flor flor-a"></span>
-          <span class="flor flor-b"></span>
-          <span class="flor flor-c"></span>
-          <span class="flor flor-d"></span>
-        </div>
-        <div class="nivel nivel-2" aria-hidden="true">
-          <span class="veladora"></span>
-          <span class="veladora"></span>
-          <span class="veladora"></span>
-          <span class="veladora"></span>
-        </div>
-        <div class="nivel nivel-3" aria-hidden="true">
-          <span class="flor flor-e"></span>
-          <span class="flor flor-f"></span>
-          <span class="flor flor-g"></span>
-          <span class="flor flor-h"></span>
-        </div>
+    <section class="altar" aria-label="Altar digital con retrato, flores y velas">
+      <div class="arco arco-externo" aria-hidden="true"></div>
+      <div class="arco arco-interno" aria-hidden="true"></div>
+      <div class="particulas" aria-hidden="true">
+        <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
       </div>
 
-      <button id="boton-vela" class="boton" type="button" aria-pressed="false" aria-controls="dedicatoria">
-        Encender la vela
-      </button>
-    </main>
+      <div class="retrato-marco">
+        <!-- FOTO OPCIONAL: sube una imagen llamada foto-recuerdo.jpg a GitHub. -->
+        <div class="retrato-interior">
+          <svg class="recuerdo-ilustrado" viewBox="0 0 180 205" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Ilustración de un corazón rodeado de luz dorada">
+            <defs>
+              <radialGradient id="aura"><stop stop-color="#cf8a48" stop-opacity=".43"/><stop offset="1" stop-color="#28162a" stop-opacity="0"/></radialGradient>
+              <linearGradient id="corazon" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#ffe5a8"/><stop offset="1" stop-color="#cb803e"/></linearGradient>
+            </defs>
+            <rect width="180" height="205" fill="#201a2b"/>
+            <circle cx="90" cy="93" r="92" fill="url(#aura)"/>
+            <g fill="none" stroke="#dfaa63" opacity=".62">
+              <circle cx="90" cy="93" r="58" stroke-dasharray="1 8" stroke-width="2"/>
+              <path d="M90 23v13 M90 151v13 M20 93h13 M147 93h13 M40 43l10 10 M130 133l10 10 M140 43l-10 10 M50 133l-10 10"/>
+            </g>
+            <path d="M90 133c-10-9-45-31-45-54 0-21 27-31 45-9 18-22 45-12 45 9 0 23-35 45-45 54Z" fill="url(#corazon)"/>
+            <path d="M90 124c-16-13-36-30-36-45 0-15 21-23 36-3" fill="none" stroke="#fff1cb" stroke-width="2" opacity=".65"/>
+            <g fill="#e7b870" font-family="Georgia, serif" font-size="10" text-anchor="middle" letter-spacing="2">
+              <text x="90" y="181">SIEMPRE PRESENTES</text>
+            </g>
+          </svg>
+          <img id="foto-personal" class="foto-personal" src="foto-recuerdo.jpg" alt="Fotografía de las personas a quienes está dedicada esta ofrenda">
+        </div>
+        <span class="esquina esquina-1" aria-hidden="true">✦</span>
+        <span class="esquina esquina-2" aria-hidden="true">✦</span>
+      </div>
 
-    <footer class="pie">
-      Publicada con AWS Amplify Hosting para JSConf México 2026
-    </footer>
+      <p class="inscripcion">A quienes viven para siempre en nosotros</p>
 
-    <script src="script.js"></script>
-  </body>
+      <div class="flores flores-izq" aria-hidden="true">
+        <span class="flor f1"></span><span class="flor f2"></span><span class="flor f3"></span>
+      </div>
+      <div class="flores flores-der" aria-hidden="true">
+        <span class="flor f1"></span><span class="flor f2"></span><span class="flor f3"></span>
+      </div>
+
+      <div class="velas" aria-hidden="true">
+        <div class="vela vela-pequena"><span class="halo"></span><span class="llama"></span><span class="pabilo"></span><span class="cera"></span></div>
+        <div class="vela vela-principal"><span class="halo"></span><span class="llama"></span><span class="pabilo"></span><span class="cera"></span></div>
+        <div class="vela vela-pequena"><span class="halo"></span><span class="llama"></span><span class="pabilo"></span><span class="cera"></span></div>
+      </div>
+      <div class="escalon escalon-alto" aria-hidden="true"></div>
+      <div class="escalon escalon-bajo" aria-hidden="true"></div>
+    </section>
+
+    <section id="dedicatoria" class="dedicatoria" aria-live="polite">
+      <p class="instruccion">Una luz, un recuerdo, un amor eterno.</p>
+      <div class="mensaje">
+        <div class="simbolo" aria-hidden="true">❝</div>
+        <p>Un homenaje a quienes, aunque ya no están físicamente a nuestro lado, permanecen eternamente en nuestros corazones. Por las risas que el tiempo no borra, los momentos que se vuelven recuerdos inolvidables y el amor que ni siquiera la ausencia puede apagar.</p>
+        <div class="firma">Con amor, para quienes nunca olvidaremos <span>♥</span></div>
+      </div>
+    </section>
+
+    <button id="boton-vela" class="boton" type="button" aria-pressed="false" aria-controls="dedicatoria">Encender la vela</button>
+    <p class="nota-boton">Toca el botón para iluminar los recuerdos</p>
+  </main>
+
+  <footer class="pie">Hecho con memoria y amor <span aria-hidden="true">✦</span> AWS Amplify · JSConf México 2026</footer>
+</body>
 </html>
