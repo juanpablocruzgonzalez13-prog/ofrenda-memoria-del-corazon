@@ -6,7 +6,7 @@
     Turquesa      #3FD0C2
     Rojo          #F22727
     Lila          #B98CFF
-  Ejemplo: --acento: #FF4FA3;
+  Ejemplo: --acento; #FF4FA3;
 */
 :root {
   --acento: #FF9F1C;
